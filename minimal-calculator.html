@@ -14,7 +14,8 @@ body {
   margin: 0 auto;
   text-align: center;
   font-size: 23px;
-
+  color: white;
+  background-color:white;
 
 }
 
@@ -22,8 +23,14 @@ body {
   max-width: 10%;
 }
 
+a,
+a:visited  {
+  color: goldenrod;
+}
 
-
+.dark {
+  background : #b7df89 !important;
+}
 
 .button > .over {
   text-decoration:overline;
@@ -39,59 +46,34 @@ body {
     background: white;
     margin: 1% 0;
     color: black;
-    border: 3px solid #000000;
-    border-radius: 5px;
-    box-shadow: 2px 2px 1px 0px #000000;
-    max-width: 450px;
-
+    border-radius: 5%;
+	border: 1px solid #e7e7e7;
+/*     box-shadow: 0px 8px 20px 0px grey; */
+    background-color: white;
 
   
 }
 
-.calculator .button {
+.calculator button {
   
     font-size: x-large;
-    min-width: 2.4em;
-    min-height: 2.4em;
+    color: #3f3f3f;
+    width: 2.5em;
+    min-height: 2.5em;
     margin: 0.8%;
     border-radius: 25%;
-    border: 0.08em solid #000;
-    font-family: monospace;
-    background: white;
-    box-shadow: 0.04em  0.04em 0.02em 0px #000000;
+    background-color: #cad8d8;
+    border: 1px solid #ad919100;
+    font-family: 'MuseoModerno', cursive;
 
 }
 
-.calculator .space {
-  
-    font-size: x-large;
-    width: 2.4em;
-    min-height: 2.4em;
-    margin: 0.5%;
-    border-radius: 15%;
-    border: 0.08em solid #ffffff;
-    background: white;
-
-
-}
-
-.calculator .accent{
-   background: #f3fff3;  
-}
 
 .calculator button:hover,
+#clear:hover,
 #backspace:hover {
-    background: #f3fff3;
-  color:#000000;
-  transform: scale(0.9);
-  border-radius: 20%;
-
-}
-
-.calculator 
-#clear:hover , #rad:hover  ,#deg:hover{
-  background: rgb(0, 0, 0)!important;
-  color:#ffffff;
+  background: #f7e583!important;
+  color: #626262;
   transform: scale(0.9);
   border-radius: 20%;
 }
@@ -104,45 +86,36 @@ body {
 
 .button:active,
 .button-active {
-  background: rgb(0, 0, 0);
-  color:#ffffff;
-  transform: scale(0.8);
+  background: gold;
+  color: white;
+  transform: scale(0.9);
 }
 
  #screen{
-
-    border: 3px solid #000000;
-    border-radius: 5px;
+    background-color: #ececec;
+    border: 3px solid transparent;
+    /* box-shadow: 3px 3px 3px 3px grey; */
+    border-radius: 29px;
     width: 80%;
-    height: 100px;
-    margin : 5%;
+    height: 120px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
     text-align: right;
     overflow: auto;
     overflow-wrap: break-word;
     font-size: 60px;
-    font-family: monospace;
-    background-color: #000;
-    color: #fff;
+    font-family: 'Dosis', sans-serif;
 
 }
 
     
+
+
 #clean {
-  background: rgb(27, 27, 27);
-  color:#ffffff;
-}
-#rad {
-  background: rgb(27, 27, 27);
-  color:#ffffff;
-}
-#deg {
-  background: rgb(27, 27, 27);
-  color:#ffffff;
+  background: #c4eded;
 }
 
-.rows{
-    margin: 5%;
-}
 
 .calculator__row1,
 .calculator__row2,
@@ -151,9 +124,10 @@ body {
 .calculator__row5 {
   display: flex;
   margin: 0 auto;
-  justify-content: space-between;
+     max-width: 80%;
+  justify-content: space-around;
   align-items: center;
-  font-family: monospace;
+  font-family: 'Libre Barcode 128 Text', cursive;
 }
 
 .calculator__row5 {
@@ -161,13 +135,14 @@ body {
 } 
 
 .footer {
-
+  /* margin-top: 2%;
+  font-size: medium; */
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
 }
-body {
+	    body {
         background-color: #191919;
       }
     </style>
@@ -177,57 +152,49 @@ body {
 <div id="main">
 		<div class="calculator">
 		<input type="text" id="screen">
-
-        <div class="rows">
-            <div class="calculator__row1">
-                <button class="button" id="rad">Rad</button>
-                <button class="button" id="deg" >Deg</button>
-                <div class="space" ></div>
-                <div class="space" ></div>
-                <div class="space" ></div>
-                <div class="space" ></div>
-                <button class="button" id="clean">AC</button>
-            </div>
-                <div class="calculator__row2">
-                     <button class="button accent">sin</button>
-                     <button class="button accent">cos</button>
-                     <button class="button accent">tan</button>
-                       <button class="button ">7</button>
-                        <button class="button ">8</button>
-                        <button class="button ">9</button>
-                        <button class="button accent">*</button>
-                </div>
-                <div class="calculator__row3">
-                    <button class="button accent">x^</button>
-                    <button class="button accent">pi</button>
-                    <button class="button accent">%</button>
-                      <button class="button ">4</button>
-                        <button class="button ">5</button>
-                        <button class="button ">6</button>
-                        <button class="button accent">/</button>
-                </div>
-                <div class="calculator__row4">
-                  <button class="button accent">ln</button>
-                  <button class="button accent">log</button>
-                  <button class="button accent">x!</button>
-                        <button class="button ">1</button>
-                        <button class="button ">2</button>
-                        <button class="button ">3</button>
-                        <button class="button accent">-</button>
-                </div>
-                        <div class="calculator__row5">
-                  <button class="button accent">&radic;<span class="over"></span></button>
-                  <button class="button accent">(</button>
-                  <button class="button accent">)</button>
-                        <button class="button accent">.</button>
-                  <button class="button ">0</button>
-                        <button class="button accent">=</button>
-                        <button class="button accent">+</button>
-            </div>
-
-        </div>
-
-
+      <div class="calculator__row1">
+    <button class="button">Rad</button>
+    <button class="button" >Deg</button>
+                               
+    <h1 style="font-size: 200%;margin-left: 230px;margin-right: 20px;"></h1>
+    <button class="button" id="clean">AC</button>
+</div>
+    <div class="calculator__row2">
+         <button class="button">sin</button>
+         <button class="button">cos</button>
+         <button class="button">tan</button>
+		   <button class="button dark">7</button>
+			<button class="button dark">8</button>
+			<button class="button dark">9</button>
+			<button class="button">*</button>
+    </div>
+	<div class="calculator__row3">
+        <button class="button">x^</button>
+        <button class="button">pi</button>
+        <button class="button">%</button>
+		  <button class="button dark">4</button>
+			<button class="button dark">5</button>
+			<button class="button dark">6</button>
+			<button class="button">/</button>
+	</div>
+	<div class="calculator__row4">
+      <button class="button">ln</button>
+      <button class="button">log</button>
+      <button class="button">x!</button>
+			<button class="button dark">1</button>
+			<button class="button dark">2</button>
+			<button class="button dark">3</button>
+			<button class="button">-</button>
+	</div>
+			<div class="calculator__row5">
+      <button class="button">&radic;<span class="over"></span></button>
+      <button class="button">(</button>
+      <button class="button">)</button>
+			<button class="button">.</button>
+      <button class="button dark">0</button>
+			<button class="button">=</button>
+			<button class="button">+</button>
+</div>
 </div>
 </div>
 
